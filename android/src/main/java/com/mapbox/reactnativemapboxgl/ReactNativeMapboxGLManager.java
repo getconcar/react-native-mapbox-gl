@@ -142,8 +142,12 @@ public class ReactNativeMapboxGLManager extends ViewGroupManager<ReactNativeMapb
     public void removeViewAt(ReactNativeMapboxGLView parent, int index) {
         View child = _childViews.remove(index);
         if (!RNMGLAnnotationView.class.equals(child.getClass())) {
-            super.removeViewAt(parent, getRealIndex(parent, index));
-        }
+             try {
+	    	super.removeViewAt(parent, getRealIndex(parent, index));
+             } catch (Exception e) {
+		// TODO: HACK FIX FOR ISSUE #531
+	     }
+	}
         for (ChildListener listener : _childListeners) {
             listener.childRemoved(child);
         }
