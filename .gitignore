@@ -28,9 +28,15 @@ Pods/
 #
 node_modules/
 npm-debug.log
+package-lock.json
+*.tgz
+yarn.lock
 
 # project specific
 ios/Mapbox.framework
+ios/temp.zip
+ios/.framework_version
+ios/Pods/
 android/build/
 android/.gradle/
 android/.idea/
@@ -41,3 +47,14 @@ android/gradlew.bat
 android/local.properties
 reactnativemapboxgl.iml
 .idea
+coverage
+.project
+*.core.prefs
+
+# Buck
+.buckd
+buck-out
+/ReactAndroid/src/main/jni/prebuilt/lib/armeabi-v7a/
+/ReactAndroid/src/main/jni/prebuilt/lib/x86/
+/ReactAndroid/src/main/gen
+
